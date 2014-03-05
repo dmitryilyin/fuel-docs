@@ -53,6 +53,9 @@ styles:
         spaceBefore: 0 
         spaceAfter: 10 
 
+    seealso-heading:
+       parent: subtitle 
+
     seealso:
         backColor: #FFFFCC
         borderColor: #FFFF66

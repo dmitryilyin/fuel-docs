@@ -2,7 +2,7 @@
 
 .. _ReferenceArchitecture:
 
-.. toctree:: Table of Contents
+.. toctree::
   :maxdepth: 2
 
 .. include:: /pages/preface/preface.rst

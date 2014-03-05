@@ -23,6 +23,4 @@
 
    PageBreak oneColumn
 
-.. toctree:: Table of Contents
-  :maxdepth: 2
 .. include:: ../contents/contents-refarch.rst

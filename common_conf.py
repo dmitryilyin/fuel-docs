@@ -284,7 +284,10 @@ extensions += ['rst2pdf.pdfbuilder']
 # ]
 pdf_stylesheets = ['letter', 'mirantis']
 pdf_style_path = ['_templates']
-#pdf_language = "en"
+
+pdf_language = "en_US"
+pdf_compressed = True
+
 # Mode for literal blocks wider than the frame. Can be
 # overflow, shrink or truncate
 pdf_fit_mode = "shrink"

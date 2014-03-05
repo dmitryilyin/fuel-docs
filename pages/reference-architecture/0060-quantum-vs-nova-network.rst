@@ -112,17 +112,18 @@ The most likely configuration for different number NICs on cluster nodes:
 Known limitations
 ~~~~~~~~~~~~~~~~~
 
-* Neutron will not allocate a floating IP range for your tenants. After each 
-  tenant is created, a floating IP range must be created. Note that this does 
-  not prevent Internet connectivity for a tenant's instances, but it would 
-  prevent them from receiving incoming connections. You, the administrator, 
-  should assign a floating IP addresses for the tenant. Below are steps you can 
+* Neutron will not allocate a floating IP range for your tenants. After each
+  tenant is created, a floating IP range must be created. Note that this does
+  not prevent Internet connectivity for a tenant's instances, but it would
+  prevent them from receiving incoming connections. You, the administrator,
+  should assign a floating IP addresses for the tenant. Below are steps you can
   follow to do this:
+  ::
 
-  | get admin credentials:
-  | # source /root/openrc
-  | get admin tenant-ID:
-  | # keystone tenant-list
+    # get admin credentials:
+    source /root/openrc
+    # get admin tenant-ID:
+    keystone tenant-list
 
   +----------------------------------+----------+---------+
   |                id                |   name   | enabled |
@@ -132,8 +133,10 @@ Known limitations
   | cba7b0ff68ee4985816ac3585c8e23a9 | services |   True  |
   +----------------------------------+----------+---------+
 
-  | create one floating-ip address for admin tenant:
-  | # quantum floatingip-create --tenant-id=b796f91df6b84860a7cd474148fb2229 net04_ext
+  ::
+
+    # create one floating-ip address for admin tenant:
+    quantum floatingip-create --tenant-id=b796f91df6b84860a7cd474148fb2229 net04_ext
 
 * You can't combine Private or Admin network with any other networks on one NIC.
 * To deploy OpenStack using Neutron with GRE segmentation, each node requires at
@@ -144,10 +147,17 @@ Known limitations
 FAQ
 ~~~
 
-| Q: I tried to deploy a Fuel OpenStack environment on VirtualBox, but the 
-     deployment fails on Neutron setup. How do I fix this?
-| A: You should to choose ”Allow all” promiscuous mode on all network 
-     interfaces in VirtualBox and modify the network cards to use the PCnet 
-     PCI II model network card.
-
-
+Q:
+  I tried to deploy a Fuel OpenStack environment on VirtualBox,
+  but the deployment fails on Neutron setup. How do I fix this?
+A:
+  You should to choose ”Allow all” promiscuous mode on all network
+  interfaces in VirtualBox and modify the network cards to use the
+  PCnet PCI II model network card.
+Q:
+  I tried to deploy a Fuel OpenStack environment on VirtualBox,
+  but the deployment fails on Neutron setup. How do I fix this?
+A:
+  You should to choose ”Allow all” promiscuous mode on all network
+  interfaces in VirtualBox and modify the network cards to use the
+  PCnet PCI II model network card.
