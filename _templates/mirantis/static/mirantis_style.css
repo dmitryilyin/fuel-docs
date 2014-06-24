@@ -3,6 +3,19 @@ div.sphinxsidebar p.logo
     margin: 1em 10px 0 -10px;
     text-align: right;
 }
+
+div.sphinxsidebar img.logo
+{
+    margin: auto;
+    display: block;
+}
+
+.sphinxglobaltoc li
+{
+    padding: 2px;
+    font-size: 100%;
+}
+
 li.toctree-l1, li.toctree-l2
 {
   margin-top: 4px;
